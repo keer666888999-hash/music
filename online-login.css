@@ -8,5 +8,5 @@
 #login-gate input[name=password] { top: 29%; }
 #login-gate button { position: absolute; border: 0; background: transparent; cursor: pointer; }
 #login-gate button[type=submit] { left: 7%; top: 78%; width: 86%; height: 23%; }
-#login-gate .register { left: 51%; top: 111%; width: 27%; height: 14%; }
-#login-gate .login-message { position: absolute; top: 128%; width: 100%; text-align: center; color: white; text-shadow: 0 1px 4px #333; }
+#login-gate .register { left: 51%; top: 111%; width: 29%; height: 14%; color: #ffe197; font-size: clamp(12px,1.1vw,19px); text-shadow: 0 1px 4px #4a3f7c; }
+#login-gate .login-message { position: absolute; left: 0; top: 64%; width: 100%; min-height: 26px; text-align: center; color: #fff3c3; font-size: clamp(12px,1vw,17px); text-shadow: 0 1px 4px #333; }
