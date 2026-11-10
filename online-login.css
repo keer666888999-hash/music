@@ -1,0 +1,12 @@
+#login-gate[hidden], #app[hidden] { display: none !important; }
+#login-gate { position: fixed; inset: 0; z-index: 100; background: #263a98 url("./assets/login-bg.png") center / cover no-repeat; }
+#login-gate form { position: absolute; left: 56.3%; top: 32.3%; width: 31.9%; height: 40%; }
+#login-gate input { position: absolute; left: 0; width: 100%; height: 20%; border: 0; border-radius: 40px; padding: 0 9% 0 20%; background: transparent; color: white; font-size: clamp(13px,1.5vw,27px); outline: none; }
+#login-gate input::placeholder { color: transparent; }
+#login-gate input:focus { box-shadow: 0 0 0 2px #ffe4a0; }
+#login-gate input[name=email] { top: 0; }
+#login-gate input[name=password] { top: 29%; }
+#login-gate button { position: absolute; border: 0; background: transparent; cursor: pointer; }
+#login-gate button[type=submit] { left: 7%; top: 78%; width: 86%; height: 23%; }
+#login-gate .register { left: 51%; top: 111%; width: 27%; height: 14%; }
+#login-gate .login-message { position: absolute; top: 128%; width: 100%; text-align: center; color: white; text-shadow: 0 1px 4px #333; }
