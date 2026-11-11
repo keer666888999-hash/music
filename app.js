@@ -6,9 +6,9 @@ const primaryViews = ["create", "home", "chapters", "journey", "charge"];
 
 const mediaPages = {
   create: { src: "photo/01-login.jpg", type: "image", alt: "幻乐之旅登录页面", next: "home", label: "继续旅程" },
-  home: { src: "photo/02-map.jpg", type: "image", alt: "幻乐世界地图", next: "chapters", prev: "create", label: "进入章节目录" },
-  map: { src: "photo/02-map.jpg", type: "image", alt: "幻乐世界地图", next: "chapters", prev: "create", label: "进入章节目录" },
-  chapters: { src: "photo/03-chapters.jpg", type: "image", alt: "萱草花章节目录", prev: "home", label: "选择练习章节" },
+  home: { src: "photo/02-map.webp", type: "image", alt: "幻乐世界地图", next: "chapters", prev: "create", label: "进入章节目录" },
+  map: { src: "photo/02-map.webp", type: "image", alt: "幻乐世界地图", next: "chapters", prev: "create", label: "进入章节目录" },
+  chapters: { src: "photo/03-chapters.webp", type: "image", alt: "萱草花章节目录", prev: "home", label: "选择练习章节" },
   journey: { src: "photo/04-journey.jpg", type: "image", alt: "幻乐之旅开启页面", prev: "chapters", label: "开始今日冒险" },
   task: { src: "photo/journey-task.jpg", type: "image", alt: "本阶段任务" },
   charge: { src: "photo/05-charge.jpg", type: "image", alt: "魔法充电" },
