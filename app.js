@@ -5,14 +5,14 @@ import { createStoryPreloader } from "./story-preloader.js";
 const primaryViews = ["create", "home", "chapters", "journey", "charge"];
 
 const mediaPages = {
-  create: { src: "photo/01-login.jpg", type: "image", alt: "幻乐之旅登录页面", next: "home", label: "继续旅程" },
+  create: { src: "photo/01-login.webp", type: "image", alt: "幻乐之旅登录页面", next: "home", label: "继续旅程" },
   home: { src: "photo/02-map.webp", type: "image", alt: "幻乐世界地图", next: "chapters", prev: "create", label: "进入章节目录" },
   map: { src: "photo/02-map.webp", type: "image", alt: "幻乐世界地图", next: "chapters", prev: "create", label: "进入章节目录" },
   chapters: { src: "photo/03-chapters.webp", type: "image", alt: "萱草花章节目录", prev: "home", label: "选择练习章节" },
-  journey: { src: "photo/04-journey.jpg", type: "image", alt: "幻乐之旅开启页面", prev: "chapters", label: "开始今日冒险" },
-  task: { src: "photo/journey-task.jpg", type: "image", alt: "本阶段任务" },
-  charge: { src: "photo/05-charge.jpg", type: "image", alt: "魔法充电" },
-  charged: { src: "photo/journey-charged.jpg", type: "image", alt: "充电完成" }
+  journey: { src: "photo/04-journey.webp", type: "image", alt: "幻乐之旅开启页面", prev: "chapters", label: "开始今日冒险" },
+  task: { src: "photo/journey-task.webp", type: "image", alt: "本阶段任务" },
+  charge: { src: "photo/05-charge.webp", type: "image", alt: "魔法充电" },
+  charged: { src: "photo/journey-charged.webp", type: "image", alt: "充电完成" }
 };
 const parentReportAssets = [
   "photo/parent-report-1.jpg",
@@ -60,7 +60,7 @@ let trainingVideoPreload = null;
 const storyPreloader = createStoryPreloader(storyActs);
 const storyOverlayImagePaths = [
   "photo/act1-start-frame.png",
-  "photo/act1-complete-layout-v5.png",
+  "photo/act1-complete-layout-v5.webp",
   "photo/listening-frame-60-transparent-v2.png",
   "photo/subtitle-frame-blue-transparent-act1-v2.png"
 ];
@@ -684,7 +684,7 @@ function storyOverlay() {
 
   if (state.phase === "listening") {
     const frame = state.listeningReady
-      ? "photo/act1-complete-layout-v5.png"
+      ? "photo/act1-complete-layout-v5.webp"
       : "photo/listening-frame-60-transparent-v2.png";
     return `
       <article class="asset-storybar act1-storybar is-listening ${state.listeningReady ? "is-ready act1-ready-state" : "act1-live-state"} ${densityClass}" aria-live="polite">
