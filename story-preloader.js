@@ -44,10 +44,12 @@ export function createStoryPreloader(acts) {
   let paused = false;
   let activeIndex = -1;
   let queueIndex = -1;
+  let queueEnd = -1;
   let queueActive = false;
 
   function advanceQueue(resource, expectedGeneration) {
     if (queueIndex !== resource.index || paused || document.hidden) return;
+    if (queueIndex >= queueEnd) return;
     queueIndex += 1;
     scheduleQueueStep(expectedGeneration);
   }
@@ -152,7 +154,7 @@ export function createStoryPreloader(acts) {
   function scheduleQueueStep(expectedGeneration) {
     cancelIdle(scheduled);
     scheduled = null;
-    if (queueIndex < 0 || queueIndex >= resources.length || paused || document.hidden) return;
+    if (queueIndex < 0 || queueIndex >= resources.length || queueIndex > queueEnd || paused || document.hidden) return;
     const resource = resources[queueIndex];
     if (["loading", "probing", "ready", "in-use"].includes(resource.status)) {
       if (resource.status === "ready" || resource.status === "in-use") {
@@ -172,6 +174,7 @@ export function createStoryPreloader(acts) {
     generation += 1;
     const expectedGeneration = generation;
     queueIndex = currentIndex + 1;
+    queueEnd = queueIndex;
     scheduleQueueStep(expectedGeneration);
   }
 
@@ -180,6 +183,7 @@ export function createStoryPreloader(acts) {
     paused = false;
     queueActive = true;
     queueIndex = Math.max(0, Number.isInteger(index) ? index : 0);
+    queueEnd = queueIndex;
     scheduleQueueStep(generation);
   }
 
